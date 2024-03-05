@@ -16,8 +16,14 @@ void ordenar(int array[], int tamanho) {
 }
 
 int main() {
-    int numeroInteiros[5] = {42, 105, 10, 50, 1};
+    int numeroInteiros[5];
     int i;
+
+    // Entrada de 5 números
+    printf("Digite 5 numeros inteiros:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &numeroInteiros[i]);
+    }
 
     // Ordenando os números
     ordenar(numeroInteiros, 5);
@@ -31,3 +37,4 @@ int main() {
 
     return 0;
 }
+
