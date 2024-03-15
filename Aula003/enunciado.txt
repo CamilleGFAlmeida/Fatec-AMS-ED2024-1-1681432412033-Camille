@@ -1,0 +1,6 @@
+Desafio 15 
+
+Fazer um programa em C para somar dois números: 
+1) Na forma Linear (estruturada)
+2) Na forma de Função 
+
