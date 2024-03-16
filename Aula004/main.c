@@ -1,3 +1,12 @@
+/*------------------------------------------------------------------------*/
+/*   FATEC - São Caetano do Sul                 Estrutura de Dados          */
+/*                                                                        */
+/*                         Camille Guillen                               */
+/*     Objetivo: Manipulação de Array de Inteiros com Ponteiros           */
+/*                                                                        */
+/*                                                        Data:16/03/2024 */
+/*------------------------------------------------------------------------*/ 
+
 #include <stdio.h>
 
 // Função para encontrar o maior elemento do array
