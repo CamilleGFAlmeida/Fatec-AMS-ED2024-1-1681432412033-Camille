@@ -1,11 +1,14 @@
 /*------------------------------------------------------------------------*/
-/*   FATEC - São Caetano do Sul                 Estrutura de Dados          */
+/*   FATEC - São Caetano do Sul                 Estrutura de Dados        */
 /*                                                                        */
-/*                         Camille Guillen                               */
-/*                  Objetivo: Manipulando Lista Ligada           */
+/*                         Camille Guillen                                */
+/*                  Objetivo: Manipulando Lista Ligada     
 /*                                                                        */
-/*                                                        Data:02/04/2024 */
+/*                 Paradigma: Utilizando Ponteiros e Nó                   */
+/*                                                                        */
+/* Profº Carlos Veríssimo                                                       Data:02/04/2024 */
 /*------------------------------------------------------------------------*/ 
+
 #include <stdio.h>
 #include <stdlib.h>
 
