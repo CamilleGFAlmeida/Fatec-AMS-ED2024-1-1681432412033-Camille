@@ -1,3 +1,14 @@
+/* -------------------------------------------------------*
+ * FATEC-São Caetano do Sul            Estrutura de Dados *
+ *               Avaliação N1 - Parte II                  *
+ *          Objetivo: Rastreamento de Pacotes             *
+ *                                                                              *
+ *         Autores: Camille Guillen / Thiago Gerbi        *
+ *                  Data: 14/04/2024                      *
+ *------------------------------------------------------  *
+ */
+
+
 #include <stdio.h>
 #include "logistica.h"
 
