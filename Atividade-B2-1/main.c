@@ -1,7 +1,17 @@
+/*------------------------------------------------------------------------*/
+/*   FATEC - São Caetano do Sul                 Estrutura de Dados        */
+/*                                                                        */
+/*                         Camille Guillen                                */
+/*                Objetivo: Manipulação de Pilhas - HP12C                 */
+/*                                                                        */
+/*                                                        Data:21/04/2024 */
+/*------------------------------------------------------------------------*/ 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <math.h>
+#include <stdbool.h>
 
 #define STACK_SIZE 100
 
@@ -14,7 +24,7 @@ typedef struct {
 // Funções auxiliares para manipulação da pilha
 void push(Stack *s, double value) {
     if (s->top == STACK_SIZE - 1) {
-        printf("Erro: Pilha cheia\n");
+        printf("A Pilha está cheia!\n");
         exit(EXIT_FAILURE);
     }
     s->items[++(s->top)] = value;
@@ -22,7 +32,7 @@ void push(Stack *s, double value) {
 
 double pop(Stack *s) {
     if (s->top == -1) {
-        printf("Erro: Pilha vazia\n");
+        printf("A Pilha está vazia!\n");
         exit(EXIT_FAILURE);
     }
     return s->items[(s->top)--];
@@ -61,17 +71,42 @@ double calculateRPN(char *rpn) {
         while (*rpn == ' ') rpn++;  // Ignorar espaços em branco
     }
 
+    if (s.top != 0) {
+        printf("Erro: Expressão RPN inválida \n\nDigite ! para inserir outra expressão: \n");
+        return NAN; // Retorna um valor NaN (Not a Number)
+    }
+
     return pop(&s);
 }
 
 int main() {
     char rpn[STACK_SIZE];
-    printf("Digite a expressão RPN: ");
-    fgets(rpn, STACK_SIZE, stdin);
+    bool expressionValid = false;
 
-    // Calcula o resultado da expressão RPN
-    double result = calculateRPN(rpn);
-    printf("Resultado: %.2f\n", result);
+    do {
+        printf("\nDigite a expressão RPN: ");
+        fgets(rpn, STACK_SIZE, stdin);
+
+        // Calcula o resultado da expressão RPN
+        double result = calculateRPN(rpn);
+        if (!isnan(result)) {
+            printf("Resultado: %.2f\n", result);
+
+            // Verifica se a expressão RPN é válida
+            printf("\nDeseja calcular outra expressão RPN? (s/n): ");
+            char choice;
+            scanf(" %c", &choice);
+            if (choice != 's' && choice != 'S')
+                expressionValid = true;
+            else
+                while (getchar() != '\n'); // Limpa o buffer do teclado
+        } else {
+            while (getchar() != '\n'); // Limpa o buffer do teclado
+        }
+
+    } while (!expressionValid);
+
+    printf("\nPrograma encerrado.\n");
 
     return 0;
 }
