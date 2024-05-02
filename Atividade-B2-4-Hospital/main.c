@@ -1,3 +1,13 @@
+/*------------------------------------------------------------------------*/
+/*   FATEC - São Caetano do Sul                 Estrutura de Dados        */
+/*                                                                        */
+/*                           Camille Guillen                              */
+/*                Objetivo: Implementação de Filas - Hospital             */
+/*                                                                        */
+/*                                                        Data:02/05/2024 */
+/*------------------------------------------------------------------------*/ 
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
