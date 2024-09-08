@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------------*/
+/*   FATEC - São Caetano do Sul                 Estrutura de Dados        */
+/*                                                                        */
+/*                           Camille Guillen                              */
+/*                Objetivo: Busca Linear (linear_search)                  */
+/*                                                                        */
+/*                                                       Data: 08/09/2024 */
+/*------------------------------------------------------------------------*/
+
+// linear_search.c
+#include <stdio.h>
+
+int linear_search(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i;  // Encontrado
+        }
+    }
+    return -1;  // Não encontrado
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 3;
+    int result = linear_search(arr, size, target);
+    if (result != -1) {
+        printf("Elemento encontrado no índice %d\n", result);
+    } else {
+        printf("Elemento não encontrado\n");
+    }
+    return 0;
+}
