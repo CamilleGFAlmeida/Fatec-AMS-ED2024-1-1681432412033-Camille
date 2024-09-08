@@ -14,7 +14,7 @@
 
 ## Gráficos
 
-![Gráfico de Comparação](../Gráficos/img/)
+[Gráfico de Comparação](../Gráficos/img/)
 
 ## Observações
 
