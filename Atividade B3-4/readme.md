@@ -75,8 +75,8 @@ O GitHub será utilizado para o versionamento e compartilhamento do código, per
 
 - Bibliotecas:
 
-**timeit** para análise de desempenho dos loops e da recursividade.
-**matplotlib (opcional)** para visualização gráfica do desempenho dos algoritmos.
+**timeit** para análise de desempenho dos loops e da recursividade. **(\**)
+**matplotlib (opcional)** para visualização gráfica do desempenho dos algoritmos.  **(\**)
 
 - Ferramenta de Benchmarking:
 
