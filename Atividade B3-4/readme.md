@@ -46,9 +46,19 @@ O sistema receberá e armazenará dados em três principais estruturas:
     int quantidade = venda.getQuantidade();
     totalVendasPorProduto.put(produto, totalVendasPorProduto.getOrDefault(produto, 0) + quantidade);
 
-2. **Laço 2 (While)**: Um laço contínuo para agregar as vendas durante o período de análise. O laço funcionará até que todos os dados de vendas sejam processados.
+2. **Laço 2 (While)**: Um laço contínuo para agregar as vendas durante o período de análise, realizando o cálculo total. O laço funcionará até que todos os dados de vendas sejam processados.
    - Código exemplo:
    ```java
+    public double calcularTotalVendas() {
+        double total = 0;
+        int index = 0;
+        while (index < listaVendas.size()) {  // Laço 2 (While)
+            Venda venda = listaVendas.get(index);
+            total += venda.getValorTotal();
+            index++;
+        }
+        return total;
+    }
 
 3. **Laço 3 (For)**: Um laço contínuo que realiza o relatório de vendas. 
    - Código exemplo:
