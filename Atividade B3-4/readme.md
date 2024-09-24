@@ -49,11 +49,18 @@ O sistema receberá e armazenará dados em três principais estruturas:
 2. **Laço 2 (While)**: Um laço contínuo para agregar as vendas durante o período de análise. O laço funcionará até que todos os dados de vendas sejam processados.
    - Código exemplo:
    ```java
-  int index = 0;
-while (index < listaVendas.size()) {
-     Venda venda = listaVendas.get(index);
-     Processa a venda (ex.: atualiza relatórios)
-    index++;
+
+3. **Laço 3 (For)**: Um laço contínuo que realiza o relatório de vendas. 
+   - Código exemplo:
+    ```java 
+     public Map<Cliente, Integer> clientesFrequentes() {
+        Map<Cliente, Integer> clientesFrequentes = new HashMap<>();
+        for (Venda venda : listaVendas) {  // Laço 3 (For)
+            Cliente cliente = venda.getCliente();
+            clientesFrequentes.put(cliente, clientesFrequentes.getOrDefault(cliente, 0) + venda.getQuantidade());
+        }
+        return clientesFrequentes;
+    }
 
 3. **Ponto de Recursividade**: A recursividade será aplicada para a análise de desempenho de vendas em períodos diferentes. Por exemplo, o sistema fará comparações entre as vendas de diferentes semanas, dividindo recursivamente os períodos de tempo para encontrar o melhor desempenho (maior volume de vendas ou maior lucro).
    - Código exemplo:
