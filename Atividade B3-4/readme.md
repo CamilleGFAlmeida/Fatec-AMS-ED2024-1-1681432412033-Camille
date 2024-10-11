@@ -14,7 +14,7 @@
 
 ## Descrição do Negócio
 
-A loja online está enfrentando desafios para gerenciar e analisar o grande volume de dados de vendas que processa diariamente. A necessidade é de um sistema que possa organizar as transações, facilitar a geração de relatórios e realizar análises detalhadas para ajudar na tomada de decisões estratégicas.
+A "DressIt" uma loja online de roupas está enfrentando desafios para gerenciar e analisar o grande volume de dados de vendas que processa diariamente. A necessidade é de um sistema que possa organizar as transações, facilitar a geração de relatórios e realizar análises detalhadas para ajudar na tomada de decisões estratégicas.
 
 - Os principais requisitos do sistema incluem:
 
